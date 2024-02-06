@@ -1,6 +1,7 @@
 
 import { Profile} from './profile/Profile'
-import userData from'../userData.json'
+import userData from '../userData.json'
+import "modern-normalize"
 import './App.css'
 // const userData = JSON.parse(userDat);
 const App = () => {
