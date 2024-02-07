@@ -1,9 +1,12 @@
+import { Profile } from './profile/Profile';
+import { FriendList } from './friendList/FriendList';
+import { TransactionHistory } from './transactionHistory/TransactionHistory';
+import userData from '../userData.json';
+import friends from '../friends.json';
+import transactions from '../transactions.json';
+import 'modern-normalize';
+import './App.css';
 
-import { Profile} from './profile/Profile'
-import userData from '../userData.json'
-import "modern-normalize"
-import './App.css'
-// const userData = JSON.parse(userDat);
 const App = () => {
   return (
     <>
@@ -14,9 +17,10 @@ const App = () => {
         image={userData.avatar}
         stats={userData.stats}
       />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </>
   );
 };
 
-
-export default App
+export default App;
